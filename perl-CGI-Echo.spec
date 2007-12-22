@@ -3,7 +3,7 @@
 Summary:	CGI-Echo module for perl 
 Name:		perl-%{real_name}
 Version:	1.04
-Release: %mkrel 2
+Release: %mkrel 3
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
