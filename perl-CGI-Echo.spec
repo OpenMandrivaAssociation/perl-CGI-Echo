@@ -1,16 +1,18 @@
-%define real_name CGI-Echo
+%define upstream_name    CGI-Echo
+%define upstream_version 1.05
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	CGI-Echo module for perl 
-Name:		perl-%{real_name}
-Version:	1.04
-Release: %mkrel 5
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tgz
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module accepts form data, cleans it, and echos it.
@@ -19,7 +21,7 @@ students to design forms and gives their long-suffering instructors a simple
 way to provide a CGI script which accepts the form data, and just echos it.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
