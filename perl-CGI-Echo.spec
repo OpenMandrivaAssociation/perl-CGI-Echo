@@ -1,5 +1,5 @@
 %define upstream_name    CGI-Echo
-%define upstream_version 1.05
+%define upstream_version 1.08
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -37,10 +37,6 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc Changes.txt README
+%doc CHANGES README META.yml
 %{perl_vendorlib}/CGI/Echo.pm
 %{_mandir}/*/*
-
-
-
-
