@@ -8,7 +8,7 @@ Release:    5
 Summary:	CGI-Echo module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}
+URL:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tgz
 
 BuildRequires:	perl-devel
